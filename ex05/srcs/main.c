@@ -6,7 +6,7 @@
 /*   By: klamprak <klamprak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 10:25:14 by klamprak          #+#    #+#             */
-/*   Updated: 2024/02/05 11:27:55 by klamprak         ###   ########.fr       */
+/*   Updated: 2024/02/05 11:44:40 by klamprak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ int	main(int argc, char *argv[])
 	if (argc != 4)
 		return (0);
 	if (!is_operator(argv[2]))
-		return (0);
-	if (!(is_number(argv[1]) && is_number(argv[3])))
 		return (0);
 	a = ft_atoi(argv[1]);
 	b = ft_atoi(argv[3]);

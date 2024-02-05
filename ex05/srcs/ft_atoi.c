@@ -6,28 +6,11 @@
 /*   By: klamprak <klamprak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 10:17:57 by klamprak          #+#    #+#             */
-/*   Updated: 2024/02/05 11:22:14 by klamprak         ###   ########.fr       */
+/*   Updated: 2024/02/05 11:48:01 by klamprak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
-
-int	is_number(char *str)
-{
-	int	i;
-	int	is_num;
-
-	i = 0;
-	is_num = 0;
-	if (str[i] == '-' || str[i] == '+')
-		i++;
-	while (str[i] != '\0' && str[i] >= '0' && str[i] <= '9')
-	{
-		is_num = 1;
-		i++;
-	}
-	return (is_num && str[i] == '\0');
-}
 
 int	get_int(char *str, int i, int sign)
 {
@@ -54,11 +37,21 @@ int	get_int(char *str, int i, int sign)
 int	ft_atoi(char *str)
 {
 	int	i;
+	int	t;
 	int	sign;
 
 	i = 0;
+	t = 1;
 	sign = 1;
-	if (str[i] == '-' || str[i] == '+')
+	while (str[i] != '\0')
+	{
+		t = (str[i] != ' ') && (str[i] != '\n') && (str[i] != '\f');
+		t = t && (str[i] != '\v') && (str[i] != '\t') && (str[i] != '\r');
+		if (t)
+			break ;
+		i++;
+	}
+	while (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
 			sign = -sign;
