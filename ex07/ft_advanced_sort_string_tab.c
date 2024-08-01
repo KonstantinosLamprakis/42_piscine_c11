@@ -6,37 +6,9 @@
 /*   By: klamprak <klamprak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 02:51:25 by klamprak          #+#    #+#             */
-/*   Updated: 2024/02/05 10:12:39 by klamprak         ###   ########.fr       */
+/*   Updated: 2024/02/05 17:08:06 by klamprak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-int	cmp(char *s1, char *s2)
-{
-	int	i;
-
-	i = 0;
-	while ((s1[i] != '\0') && (s2[i] != '\0'))
-	{
-		if (s1[i] > s2[i])
-		{
-			return (1);
-		}
-		else if (s1[i] < s2[i])
-		{
-			return (-1);
-		}
-		i++;
-	}
-	if (s1[i] == '\0' && s2[i] == '\0')
-	{
-		return (0);
-	}
-	else if (s1[i] == '\0')
-	{
-		return (-1);
-	}
-	return (1);
-}
 
 void	ft_advanced_sort_string_tab(char **tab, int (*cmp)(char *, char *))
 {
@@ -64,6 +36,33 @@ void	ft_advanced_sort_string_tab(char **tab, int (*cmp)(char *, char *))
 }
 
 // #include <stdio.h>
+// int	cmp(char *s1, char *s2)
+// {
+// 	int	i;
+
+// 	i = 0;
+// 	while ((s1[i] != '\0') && (s2[i] != '\0'))
+// 	{
+// 		if (s1[i] > s2[i])
+// 		{
+// 			return (1);
+// 		}
+// 		else if (s1[i] < s2[i])
+// 		{
+// 			return (-1);
+// 		}
+// 		i++;
+// 	}
+// 	if (s1[i] == '\0' && s2[i] == '\0')
+// 	{
+// 		return (0);
+// 	}
+// 	else if (s1[i] == '\0')
+// 	{
+// 		return (-1);
+// 	}
+// 	return (1);
+// }
 // int	main(void)
 // {
 // 	int	i;

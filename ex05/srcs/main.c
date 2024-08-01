@@ -6,7 +6,7 @@
 /*   By: klamprak <klamprak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 10:25:14 by klamprak          #+#    #+#             */
-/*   Updated: 2024/02/05 11:44:40 by klamprak         ###   ########.fr       */
+/*   Updated: 2024/02/05 17:03:47 by klamprak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,6 @@ int	is_operator(char *str)
 	is_o = is_o || (str[0] == '/') || (str[0] == '%');
 	is_o = is_o && (str[1] == '\0');
 	if (!is_o)
-		ft_putstr("0");
+		ft_putstr("0\n");
 	return (is_o);
 }
